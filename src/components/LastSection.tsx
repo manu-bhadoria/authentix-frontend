@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './LastSection.module.css';
-import blogImage from './blog-image.png'; // Replace with your actual image import
+import blogImage from './blog-image.png'; 
 
 const LastSection = () => {
-  // URL of the Medium blog post
+ 
   const blogUrl = 'https://medium.com/your-blog-post';
 
   return (
@@ -14,7 +14,7 @@ const LastSection = () => {
         Explore more on advanced web3 authentication systems that we are building!
         </p>
         <div className={styles.imageContainer}>
-          {/* Wrap the image, title, and date with an anchor tag */}
+         
           <a href={blogUrl} className={styles.blogLink} target="_blank" rel="noopener noreferrer">
             <img src={blogImage} alt="Blog Article" className={styles.blogImage} />
             <div className={styles.overlay}>

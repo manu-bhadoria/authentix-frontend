@@ -1,167 +1,154 @@
-/* src/components/HeroSection.module.css */
 .hero {
-    text-align: center;
-    margin-top: 20px; /* Adjust as needed */
-    padding: 33vh 0; 
-    position: relative;
-  }
-  
-  .title {
-    font-size: 4rem; /* Adjust as needed */
-    margin-bottom: 1rem; /* Adjust as needed */
-    background: -webkit-linear-gradient(left, #7BFBF4, #82B0EB);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent; /* Fallback: On browsers that don't support gradient text */
-  }
-  
-  .subtitle {
-    color: #92E6EF;
-    font-size: 1.2rem;
-    margin-bottom: 2rem; /* Adjust as needed */
-  }
-  
-  .buttons {
-    /* Adjust the button styling as needed */
-  }
-  
-  .button {
-    background-color: #052A36; /* Button background color */
-    border: 2px solid #AEAEAE; /* Add border color */
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 4px;
-    color: #B7E4EA;
-    cursor: pointer;
-    transition: all 0.3s; /* Changed to 'all' to include border color in the transition */
+  text-align: center;
+  margin-top: 20px;
+  padding: 33vh 0; 
+  position: relative;
 }
-  
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  background: -webkit-linear-gradient(left, #7BFBF4, #82B0EB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  color: #92E6EF;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+}
+
+.button {
+  background-color: #052A36;
+  border: 2px solid #AEAEAE;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 4px;
+  color: #B7E4EA;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
 .button:hover {
-  background-color: #236b8e; /* Darker shade for hover effect */
-  border-color: #7BFBF4; /* Optional: Change border color on hover */
+  background-color: #236b8e;
+  border-color: #7BFBF4;
 }
-  /* src/components/FeaturesSection.module.css */
-/* ... existing styles ... */
 
 .accordion {
-    width: 100%;
+  width: 100%;
+}
+
+.accordionTitle {
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.accordionTitle:hover,
+.accordionTitle:focus {
+  background-color: #1a2e4f;
+}
+
+.accordionTitle strong {
+  margin-left: 10px;
+}
+
+.dropdownIcon {
+  margin-left: auto;
+  padding: 0 20px;
+  font-size: 1.25rem;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.show {
+  max-height: 100px;
+}
+
+.imageSection {
+  text-align: center;
+}
+
+.icon {
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+}
+
+@media (max-width: 600px) {
+  .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10vh 5%;
+      margin-top: 0;
+      height: 100vh;
+      text-align: center;
   }
-  
-  .accordionTitle {
-    background: none;
-    border: none;
-    color: #fff;
-    text-align: left;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+
+  .title {
+      font-size: 2.5rem;
+      margin-top: 0;
   }
-  
-  .accordionTitle:hover,
-  .accordionTitle:focus {
-    background-color: #1a2e4f; /* Subtle hover effect */
+
+  .subtitle {
+      font-size: 1rem;
+      margin-top: 0;
+      padding: 0 11%;
+      text-align: center;
   }
-  
-  .accordionTitle strong {
-    margin-left: 10px;
+
+  .buttons {
+      flex-direction: column;
+      margin-top: 2rem;
   }
-  
-  .dropdownIcon {
-    margin-left: auto; /* Pushes the dropdown icon to the right */
-    padding: 0 20px;
-    font-size: 1.25rem;
+
+  .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
   }
-  
-  .content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+
+  .logo, .navigation {
+      flex: 1;
   }
-  
-  .show {
-    max-height: 100px; /* Adjust based on your content */
+
+  .logo {
+      align-self: flex-start;
   }
-  
-  .imageSection {
-    /* ... existing styles ... */
-    text-align: center; /* Center-align the image */
+
+  .navigation {
+      align-self: flex-end;
+      text-align: right;
   }
-  
-  /* Adjust below styles for proper alignment and visual hierarchy */
-  
-  .icon {
-    /* ... existing styles ... */
-    text-align: center; /* Center the icons */
+
+  .walletButton {
+      margin: 0;
+      width: auto;
   }
-  
-  /* ... existing styles ... */
-  
-  @media (max-width: 960px) {
-    /* ... existing media queries ... */
-  }
-  
-  /* Add media query for smaller devices to stack features and image */
-  @media (max-width: 600px) {
-    .hero {
-      display: flex; /* Use flexbox layout */
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items horizontally */
-      justify-content: center; /* Center items vertically */
-      padding: 10vh 5%; /* Adjust padding to ensure content is centered and has spacing from screen edges */
-      margin-top: 0; /* Reset any top margin */
-      height: 100vh; /* Optional: Set the height to fill the viewport */
-      text-align: center; /* Ensure text is centered */
-    }
-    
-    .title {
-      font-size: 2.5rem; /* Adjust font size for mobile */
-      margin-top: 0; /* Remove top margin to move title up */
-    }
-    
-    .subtitle {
-      font-size: 1rem; /* Adjust subtitle font size for mobile */
-      margin-top: 0; /* Remove top margin to move subtitle up */
-      padding: 0 11%; /* Add padding for screen edges */
-      text-align: center; /* Align to the left */
-    }
-    
-    .buttons {
-      flex-direction: column; /* Stack buttons vertically */
-      margin-top: 2rem; /* Add space between subtitle and buttons */
-    }
-    
-    /* Align logo to the top left and Connect Wallet button to the top right */
-    .navbar {
-      flex-direction: row; /* Row direction for horizontal alignment */
-      justify-content: space-between; /* Space between logo and button */
-      align-items: center; /* Center items vertically */
-      padding: 10px 15px; /* Padding around the edges */
-      position: absolute; /* Positioning relative to hero */
-      top: 0; /* At the top of the hero container */
-      left: 0; /* Starting from the left */
-      width: 100%; /* Full width of the container */
-    }
-    
-    .logo, .navigation {
-      flex: 1; /* Equal flex grow for both logo and navigation */
-    }
-    
-    .logo {
-      align-self: flex-start; /* Align logo to the start (top left) */
-    }
-    
-    .navigation {
-      align-self: flex-end; /* Align navigation to the end (top right) */
-      text-align: right; /* Text align to the right for the button */
-    }
-    
-    .walletButton {
-      margin: 0; /* Remove margin around the button */
-      width: auto; /* Auto width based on content */
-    }
-  }
+}

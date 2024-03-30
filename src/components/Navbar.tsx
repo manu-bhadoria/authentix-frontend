@@ -1,18 +1,58 @@
-// src/components/Navbar.tsx
-import React from 'react';
-import logo from './logo.svg'; // Update the path if necessary
+import React, { useState } from 'react';
+import logo from './logo.svg'; 
 import styles from './Navbar.module.css';
+import { Fuel, FuelWalletConnector } from '@fuel-wallet/sdk';
 
 const Navbar = () => {
+  const [fuel, setFuel] = useState<Fuel | null>(null);
+  const [walletAddress, setWalletAddress] = useState<string | null>(null);
+
+  const connectWallet = async () => {
+    try {
+      const fuelInstance = new Fuel({
+        connectors: [new FuelWalletConnector()],
+      });
+  
+      const connectors = await fuelInstance.connectors();
+      console.log("Available connectors", connectors);
+  
+      const connectionState = await fuelInstance.connect();
+      console.log("Connection state", connectionState);
+  
+      if (connectionState) { 
+        const accounts = await fuelInstance.accounts();
+        console.log("Accounts", accounts);
+        setWalletAddress(accounts[0]);
+        setFuel(fuelInstance);
+      } else {
+        throw new Error('Connection failed');
+      }
+    } catch (error) {
+      console.error("Connection failed", error);
+    }
+  };
+
+  const disconnectWallet = () => {
+    setFuel(null);
+    setWalletAddress(null);
+   
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <img src={logo} alt="Authentix Logo" />
       </div>
       <div className={styles.navigation}>
-        <a href="" className={styles.link}> </a>
-        <a href="" className={styles.link}> </a>
-        <button className={styles.walletButton}>Connect Wallet</button>
+        {walletAddress ? (
+          <span className={styles.walletAddress} onClick={disconnectWallet}>
+            {walletAddress}
+          </span>
+        ) : (
+          <button className={styles.walletButton} onClick={connectWallet}>
+            Connect Wallet
+          </button>
+        )}
       </div>
     </nav>
   );

@@ -60,7 +60,7 @@ const features = {
             <p className={styles.subtitle}>Unveiling next-generation identity verification for a digital world - secure, seamless, and decentralized.</p>
             {Object.keys(features).map((key) => {
               const featureKey = key as FeatureKey;
-              // isOpen now correctly represents if the feature is open or not
+              
               const isOpen = activeFeature === featureKey;
               return (
                 <div key={featureKey} className={styles.featureItem}>
@@ -75,7 +75,7 @@ const features = {
                       {isOpen ? '−' : '+'}
                     </span>
                   </button>
-                  {/* Only show content if the feature is the active feature */}
+                 
                   {isOpen && (
                     <div className={`${styles.featureContent} ${isOpen ? styles.show : ''}`}>
                       {features[featureKey].content}
@@ -86,7 +86,7 @@ const features = {
             })}
           </div>
           <div className={styles.featureVisualization}>
-            {/* The image will change based on the active feature */}
+           
             <img src={activeFeature ? features[activeFeature].image : features['behavioral'].image} alt={`${activeFeature || 'behavioral'} visualization`} />
           </div>
         </section>

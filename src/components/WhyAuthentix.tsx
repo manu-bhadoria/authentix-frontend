@@ -1,4 +1,3 @@
-// src/components/WhyAuthentix.tsx
 import React from 'react';
 import styles from './WhyAuthentix.module.css';
 import sybilIcon from './1.svg';

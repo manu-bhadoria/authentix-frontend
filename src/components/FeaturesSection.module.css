@@ -22,24 +22,24 @@
     font-size: 2.5rem;
     text-align: left;
     width: 90%;
-    margin-bottom: 0.5rem; /* Adjusted gap between subheading and features */
+    margin-bottom: 0.5rem; 
     
-    /* Apply the linear gradient as a background */
+   
     background-image: linear-gradient(to right, #7BFBF4, #82B0EB);
     
-    /* Ensure the gradient background is only applied to the text */
+   
     -webkit-background-clip: text;
     background-clip: text;
     
-    /* Make the text color transparent, so the gradient shows through */
+   
     -webkit-text-fill-color: transparent;
-    color: transparent; /* Fallback for browsers that do not support gradient text */
+    color: transparent; 
   }
   
   .subtitle {
     text-align: left;
     font-size: 1rem;
-    margin-bottom: 5rem; /* Increased gap between subheading and features */
+    margin-bottom: 5rem;
     color: #92E6EF;
     width: 90%;
   }
