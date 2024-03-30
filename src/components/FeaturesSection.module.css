@@ -1,0 +1,114 @@
+/* src/components/FeaturesSection.module.css */
+.features {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .featuresList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 600px;
+    margin-right: 20px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    text-align: left;
+    width: 90%;
+    margin-bottom: 0.5rem; /* Adjusted gap between subheading and features */
+    
+    /* Apply the linear gradient as a background */
+    background-image: linear-gradient(to right, #7BFBF4, #82B0EB);
+    
+    /* Ensure the gradient background is only applied to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Make the text color transparent, so the gradient shows through */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for browsers that do not support gradient text */
+  }
+  
+  .subtitle {
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 5rem; /* Increased gap between subheading and features */
+    color: #92E6EF;
+    width: 90%;
+  }
+  
+  .featureItem {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+  }
+  
+  .itemExpanded {
+    background: #0E202B;
+  }
+  
+  .featureTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    color: #B7E4EA;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: transparent;
+    
+  }
+  
+  .featureContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
+    color: #469DAC;
+  }
+  
+  .featureContent.show {
+    max-height: 500px;
+    padding: 10px 20px;
+  }
+  
+  .featureVisualization {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 50px;
+    align-self: center;
+    padding: 0 50px;
+  }
+  
+  .featureVisualization img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 960px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+    .featuresList {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    .featureVisualization {
+      width: 100%;
+      max-width: none;
+      margin-top: 30px;
+    }
+  }
+  

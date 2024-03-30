@@ -1,0 +1,100 @@
+/* src/components/Navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem; /* Adjust padding for a sleek look */
+  max-width: 100%;
+  color: #FFFFFF;
+  background-color: transparent; /* Can also be a gradient or a solid color */
+  box-shadow: none; /* Remove shadows for a flat design */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sleek font */
+  z-index: 10;
+  position: relative;
+}
+
+.logo img {
+  height: 50px; /* Adjust as needed for a sleek logo size */
+}
+
+.navigation {
+  display: flex;
+  gap: 0.5rem; /* Adjust space between links */
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1rem; /* Adjust font size for sleekness */
+  padding: 0.5rem 5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover, .link:focus {
+  color: #58a6ff; /* Subtle interaction color */
+}
+
+.walletButton {
+  background-color: #58a6ff; /* Button background color */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2px; /* Sleek rounded corners */
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 1rem;
+  font-weight: 600; /* Bold text for the button */
+}
+
+.walletButton:hover {
+  background-color: #236b8e; /* Interactive hover effect */
+}
+
+/* Add a bottom border to the navbar */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px; /* Sleek line */
+  background: linear-gradient(to right, #7BFBF4, #82B0EB); /* Gradient line */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  .logo, .walletButton {
+    flex: 1;
+  }
+
+  .logo {
+    order: -1; /* Moves logo to the beginning */
+  }
+  .logo img {
+    transform: scale(0.5);
+    transform-origin: top left; /* Ensures the logo scales down from the top left corner */
+  }
+  .navigation {
+    margin-top: 0;
+    justify-content: flex-end;
+  }
+
+  /* Hide navigation links on mobile */
+  .navigation .link {
+    display: none;
+  }
+
+  /* Adjust wallet button to fit at the top right */
+  .walletButton {
+    order: 2;
+    padding: 0.5rem 1rem; /* Adjust padding to fit better */
+    transform: scale(0.5);
+    transform-origin: top right;
+  }
+}

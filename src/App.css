@@ -1,7 +1,20 @@
+* {
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
 .App {
   text-align: center;
+  background-color: #0E202B; /* Background color of the entire app, if it's the same as the navbar */
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center child components */
+  justify-content: center;
+  width: 100%; /* Ensure it spans the full width of the viewport */
+  overflow-x: hidden; /* Hide any horizontal overflow */
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +39,19 @@
 
 .App-link {
   color: #61dafb;
+}
+/* src/App.css or other global stylesheet */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Ensure that the body does not have a max-width set that could be causing the issue */
+body {
+  background-color: #121d33; /* This should match the dark background color */
 }
 
 @keyframes App-logo-spin {

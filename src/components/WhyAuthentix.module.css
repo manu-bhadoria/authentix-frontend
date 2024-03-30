@@ -1,0 +1,76 @@
+/* src/components/WhyAuthentix.module.css */
+.whyAuthentix {
+    background-color: #0a0a0a; /* Your black background */
+    color: #ffffff;
+    padding: 4rem 0;
+    width: 100vw; /* Set width to the full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the content */
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+  }
+  
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(to right, #7BFBF4, #82B0EB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback for browsers that do not support gradient text */
+}
+  
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: 4rem; /* Increased from 2rem to 4rem for more space */
+  text-align: center;
+  color: #92E6EF;
+}
+  
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin-top: 8rem; /* Added margin-top for more space above the grid */
+}
+
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .icon {
+    height: 64px; /* Adjust as needed */
+    width: 64px; /* Adjust as needed */
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1); /* Slight scale-up on hover */
+  }
+  
+  .featureTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 960px) {
+    .featuresGrid {
+      grid-template-columns: repeat(2, 1fr); /* Stacks the grid into 2 columns on smaller screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .featuresGrid {
+      grid-template-columns: 1fr; /* Stacks the grid into 1 column on very small screens */
+    }
+  }
+  

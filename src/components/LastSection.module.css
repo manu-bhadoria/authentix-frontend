@@ -1,0 +1,113 @@
+.lastSection {
+    /* background-color: #0a0a0a; */
+    color: #fff;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: -webkit-linear-gradient(left, #7BFBF4, #82B0EB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .subHeading {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #92E6EF;
+  }
+  
+  .imageContainer {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+  
+  .blogImage {
+    width: 100%;
+    max-width: 800px; 
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: -30px; 
+    left: 0; 
+    padding: 4rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .blogTitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.25rem; /* Reduce the gap by decreasing the bottom margin */
+  }
+  
+  .blogDate {
+    font-size: 0.8rem;
+    color: #ddd;
+    margin-top: 0; /* Remove any additional top margin if present */
+    position: relative;
+    top: 10px; /* Move a little downwards */
+  }
+  
+  .copyRight {
+    font-size: 0.875rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: #A6CFD5;
+  }
+  .copyRight::before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem; /* adjust as needed */
+    width: 80%; /* adjust as needed */
+    border-top: 1px solid #A6CFD5;
+  }
+
+  /* Add responsive styling for mobile devices */
+@media (max-width: 768px) {
+  .imageContainer {
+    margin-bottom: 2rem; /* Adjust the bottom margin as needed */
+  }
+
+  .blogImage {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    /* Remove max-width to allow image to be full width on mobile */
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0; /* Align the overlay to the bottom of the image container */
+    left: 0; /* Align the overlay to the left of the image container */
+    padding: 1rem; /* Adjust the padding as needed */
+    width: 100%; /* Ensure the overlay covers the width of the image */
+    box-sizing: border-box; /* Include padding in the width */
+  }
+
+  .blogTitle,
+  .blogDate {
+    text-align: left; /* Align the text to the left */
+  }
+
+  /* Adjust the positioning of the blogDate if necessary */
+  .blogDate {
+    position: static; /* Default positioning */
+    padding-top: 0.5rem; /* Add a little space above the date */
+  }
+}
