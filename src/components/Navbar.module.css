@@ -2,31 +2,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem; /* Adjust padding as needed */
   color: #FFFFFF;
   font-family: 'Helvetica Neue', sans-serif;
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  top: 0; /* Keep the navbar at the top */
+  left: 0; /* Align the navbar to the left */
+  width: 100%; /* The navbar should span the full width */
+  z-index: 1000; /* The navbar should stay above other elements */
 }
 
 .logo img {
-  height: 60px;
-  margin-right: 4rem;
-  margin-left: -12rem;
+  height: 60px; /* Adjust size as needed */
+  /* Remove the negative margin to bring the logo closer to the left side */
 }
+
 .walletButton {
   background-color: #1B75BC;
   color: #FFFFFF;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.5rem; /* Adjust padding as needed */
   border-radius: 5px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  margin-left: 24rem;
-  margin-right: -12rem;
+  /* Remove the margin-left and margin-right */
 }
+
 .navigation {
   display: flex;
   align-items: center;

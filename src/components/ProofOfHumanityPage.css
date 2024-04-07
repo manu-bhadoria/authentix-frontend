@@ -1,0 +1,78 @@
+/* ProofOfHumanityPage.css */
+.proof-of-humanity-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #0e202b;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #ffffff;
+  }
+  
+  .proof-of-humanity-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .proof-of-humanity-page h2 {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+    color: #ade3ff;
+  }
+  
+  .verify-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  .verify-button:not(.verified) {
+    background-color: #1b75bc;
+    color: #fff;
+  }
+  
+  .verify-button.verified {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .verify-button:not(.verified):hover {
+    background-color: #3284ff;
+  }
+  
+  .bot-verification p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #a2becd;
+    font-size: 0.8rem;
+  }
+  
+  /* Animation for button when it changes to verified */
+  @keyframes verifiedAnimation {
+    0% {
+      transform: scale(1);
+      background-color: #1b75bc;
+    }
+    50% {
+      transform: scale(1.05);
+      background-color: #34a853;
+    }
+    100% {
+      transform: scale(1);
+      background-color: #4caf50;
+    }
+  }
+  
+  .verified {
+    animation: verifiedAnimation 1s forwards;
+  }
+  
