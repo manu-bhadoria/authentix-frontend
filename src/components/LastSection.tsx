@@ -3,8 +3,7 @@ import styles from './LastSection.module.css';
 import blogImage from './blog-image.png'; 
 
 const LastSection = () => {
- 
-  const blogUrl = 'https://medium.com/your-blog-post';
+  const blogUrl = 'https://medium.com/@authentixfuel/fortifying-anonymity-and-ensuring-impeccable-user-authenticity-in-blockchain-paradigms-addef30b29c0';
 
   return (
     <footer className={styles.lastSection}>
@@ -14,7 +13,6 @@ const LastSection = () => {
         Explore more on advanced web3 authentication systems that we are building!
         </p>
         <div className={styles.imageContainer}>
-         
           <a href={blogUrl} className={styles.blogLink} target="_blank" rel="noopener noreferrer">
             <img src={blogImage} alt="Blog Article" className={styles.blogImage} />
             <div className={styles.overlay}>
@@ -24,7 +22,7 @@ const LastSection = () => {
           </a>
         </div>
       </div>
-      <div className={styles.copyRight}>Copyright © 2024 authentix</div>
+      <div className={styles.copyRight}>Copyright © 2024 Authentix</div>
     </footer>
   );
 };

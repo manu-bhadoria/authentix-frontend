@@ -35,13 +35,14 @@ const Navbar = () => {
   const disconnectWallet = () => {
     setFuel(null);
     setWalletAddress(null);
-   
   };
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <img src={logo} alt="Authentix Logo" />
+        <a href="/">
+          <img src={logo} alt="Authentix Logo" />
+        </a>
       </div>
       <div className={styles.navigation}>
         {walletAddress ? (
