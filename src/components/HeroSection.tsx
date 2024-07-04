@@ -16,7 +16,7 @@ const HeroSection = () => {
   };
 
   const handleLearnMoreClick = () => {
-    window.open('https://medium.com/@authentixfuel/fortifying-anonymity-and-ensuring-impeccable-user-authenticity-in-blockchain-paradigms-addef30b29c0', '_blank');
+    window.open('https://medium.com/@authentixfuel/authentix-complete-sybil-resistance-4ac8aa6011f4', '_blank');
   };
 
   const handleMouseEnter = () => {

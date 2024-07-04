@@ -3,7 +3,7 @@ import styles from './LastSection.module.css';
 import blogImage from './blog-image.png'; 
 
 const LastSection = () => {
-  const blogUrl = 'https://medium.com/@authentixfuel/fortifying-anonymity-and-ensuring-impeccable-user-authenticity-in-blockchain-paradigms-addef30b29c0';
+  const blogUrl = 'https://medium.com/@authentixfuel/authentix-complete-sybil-resistance-4ac8aa6011f4';
 
   return (
     <footer className={styles.lastSection}>
