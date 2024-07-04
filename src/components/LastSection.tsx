@@ -17,7 +17,7 @@ const LastSection = () => {
             <img src={blogImage} alt="Blog Article" className={styles.blogImage} />
             <div className={styles.overlay}>
               <h3 className={styles.blogTitle}>Fuel’s Plug-and-play Proof of Humanity Protocol</h3>
-              <p className={styles.blogDate}>- March 29, 2024</p>
+              <p className={styles.blogDate}>- June 4, 2024</p>
             </div>
           </a>
         </div>
